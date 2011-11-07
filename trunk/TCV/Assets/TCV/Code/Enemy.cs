@@ -19,6 +19,8 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+		
+		weapon.currentTime += Time.deltaTime;
         if (health <= 0) Destroy(transform.gameObject);
 		
 		if (Input.GetKeyDown(KeyCode.T))
