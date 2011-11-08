@@ -21,7 +21,7 @@ public class SwordAnimation : MonoBehaviour {
 		//Swing Forward
 		if (Input.GetMouseButtonDown(0))
 		{
-			transform.localEulerAngles = new Vector3(43,0,0);
+            transform.localEulerAngles = new Vector3(43, 0, 0);
 			transform.Rotate( new Vector3(swingAngle,0,0), Space.Self);
 			rotating = true;
 		}
