@@ -22,9 +22,11 @@ public class Player : MonoBehaviour
     public float baseSalvageRate = 1;
     public int currentHealth; //Current
     public int currentPower;
+	public int skillPoints = 0;
 
     //Refrenced GameObjects
     public Transform cameraRef;     //Refrence to camera
+	public Abilities abilities;
 
     //Stance Variables
     const int MELEE = 0;
@@ -66,6 +68,19 @@ public class Player : MonoBehaviour
         {
             currentWeapon.Shoot(true,cameraRef,baseAttack);
         }
+		
+		//Use ability A
+		if (Input.GetMouseButtonDown(1))
+		{
+			abilities.useAbilityA();
+		}
+		
+		//Use ability B
+		if (Input.GetKeyDown(KeyCode.LeftShift))
+		{
+			abilities.useAbilityB();
+		}
+		
 		
 		//Switch Stances
         if (Input.GetKeyDown(SwitchToMelee))
