@@ -26,7 +26,10 @@ public class Projectile : MonoBehaviour
 
         //If it has reached it's max range, destroy self
         if (range <= 0)
+		{
+			Instantiate(EndParticle,transform.position,transform.rotation);
             Destroy(transform.gameObject);
+		}
         //else update range
         range -= Time.deltaTime;
         

@@ -44,9 +44,6 @@ public class Weapons : MonoBehaviour
 
     public void Shoot(bool isFriendly, Transform rotation, int baseAttack)
     {
-
-        Debug.Log(currentTime + " > " + weaponFireRate);
-
         if (currentTime > weaponFireRate)
         {
             //Define projectile properties
